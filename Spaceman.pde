@@ -8,4 +8,6 @@ void setup()
 
 void draw()
 {
+  
+  background(bgImage);
 }
