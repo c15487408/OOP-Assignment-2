@@ -1,4 +1,5 @@
 Player player;
+Pillars[] pillars = new Pillars[2]; // array for pillars
 PImage bgImage;
 void setup()
 {
