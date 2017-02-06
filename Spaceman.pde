@@ -23,3 +23,12 @@ void startScreen()
   fill(255);
   text("SPACEMAN",width/2, height/2,width, 100);
 }
+
+void gameOver() 
+{
+  rectMode(CENTER);
+  textSize(40);
+  textAlign(CENTER);
+  fill(255);
+  text("GAME OVER",width/2, height/2,width, 100);
+}
