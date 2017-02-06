@@ -11,4 +11,15 @@ void draw()
 {
   
   background(bgImage);
+  startScreen();
+  
+}
+
+void startScreen() {
+  textSize(40);
+  textAlign(CENTER, CENTER);
+  fill(255);
+  text("SPACEMAN",
+       width/2, height/2,
+       width, 100);
 }
