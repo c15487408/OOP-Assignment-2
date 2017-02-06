@@ -1,4 +1,4 @@
-
+Player player;
 PImage bgImage;
 void setup()
 {
