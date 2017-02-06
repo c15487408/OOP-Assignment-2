@@ -15,11 +15,11 @@ void draw()
   
 }
 
-void startScreen() {
+void startScreen() 
+{
+  rectMode(CENTER);
   textSize(40);
-  textAlign(CENTER, CENTER);
+  textAlign(CENTER);
   fill(255);
-  text("SPACEMAN",
-       width/2, height/2,
-       width, 100);
+  text("SPACEMAN",width/2, height/2,width, 100);
 }
