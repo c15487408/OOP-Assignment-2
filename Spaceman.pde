@@ -40,7 +40,7 @@ void draw()
   }
   
 }
-void action()
+void fly()
 {
   if (gameOver)
   {
@@ -62,7 +62,7 @@ void action()
 }
 
 void keyPressed() {
-  action();
+  fly();
 }
 
 
