@@ -52,4 +52,9 @@ Method line "tube" and refreshes
 
 
 
+  boolean playerPos(float x, float y, float playerPosX, float playerPosY, float xRect, float yRect)
+  {
+    return (x >= playerPosX && x <= xRect && y >= playerPosY && y <= yRect);
+  }
+
 }
