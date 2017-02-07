@@ -1,3 +1,4 @@
+//Reyan Jaimon
 Player player;
 Pillars[] pillars = new Pillars[2]; // array for pillars
 Score score;
