@@ -18,8 +18,9 @@ class Pillars
   {
     pushStyle();
     
-    //draw pillars
+    //draw pillars from corner
     //Pillars/ Rects move using push and pop matrix
+    //Two rects created for top and bottam  pillars
     rectMode(CORNERS);
     fill(128,0,0);
     rect(pillarx, pillary, pillarx+pillarWidth, height-1);
@@ -33,13 +34,14 @@ class Pillars
     
   }
   
-  
+  //function to reset pillars
   void resetRect() 
   {
     pillarx = pillarx2;
     pillary = random(110, height-110);
   }
-
+  
+  //function to reposition pillars
   void repoRect() 
   {
     pillarx = width;
