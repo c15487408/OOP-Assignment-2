@@ -48,7 +48,7 @@ class Pillars
     pillary = random(110, height-110);
   }
   
-  //Function to see if the player crashed
+  //Functions to see if the player crashed
 
   boolean playerCrash(Player bryan) //Player name
   {
@@ -71,7 +71,7 @@ class Pillars
     return playerPos(pillarX1 + halfWidth, pillarY1 + halfHeight, playerPosX2, playerPosY2, xRect2, yRect2) ||playerPos(pillarX1 - halfWidth, pillarY1 - halfHeight, playerPosX2, playerPosY2, xRect2, yRect2) ||playerPos(pillarX1 + halfWidth, pillarY1 - halfHeight, playerPosX2, playerPosY2, xRect2, yRect2)|| playerPos(pillarX1 - halfWidth, pillarY1 + halfHeight, playerPosX2, playerPosY2, xRect2, yRect2);
   }
   
-  //Where player
+  //Is player inside
   boolean playerPos(float x, float y, float playerPosX, float playerPosY, float xRect, float yRect)
   {
     return (x >= playerPosX && x <= xRect && y >= playerPosY && y <= yRect);
