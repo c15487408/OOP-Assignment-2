@@ -12,13 +12,17 @@ class Score {
       addScore = true;
     }
   }
-
+  
+  //Function to reset score
   void resetScore() 
   {
     score = 0;
     addScore = false;
   }
-  void pillarScore() {
+  
+  //Function to stop adding score and display score when game is over
+  void pillarScore() 
+  {
     addScore = false;
         rectMode(CORNER);
     textAlign(LEFT);
