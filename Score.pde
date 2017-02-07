@@ -35,7 +35,8 @@ class Score {
   void draw()
   {
     pushStyle();
-
+    
+    //Display score while playing game
     rectMode(CORNER);
     textAlign(LEFT);
     fill(255);
