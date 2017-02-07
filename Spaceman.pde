@@ -55,7 +55,7 @@ void draw()
 
     
   }
-  
+ 
 }
 
 void fly()
@@ -76,10 +76,10 @@ void fly()
   }
   else 
   {
-    player.fly();
+    player.fly(); // call function from player class
   }
 }
-
+//If any key pressed player will fly
 void keyPressed()
 {
   fly();
