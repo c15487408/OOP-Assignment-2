@@ -1,24 +1,17 @@
   class Player {
   float x;
   float y;
-  float size = 40;
-  float vy = 0;
-  float ay = 0.2;
+  float size = 38;
+  float yv = 0;
+  float ya = 0.25;
   PImage player;
 
-  Player(float initialX, float initialY) {
-    x = initialX;
-    y = initialY;
+  Player(float x3, float y3) {
+    x = x3;
+    y = y3;
     player = loadImage("player.png");
   }
 
-  /**
-
-Method line "bird" and refreshes
-   its position on the screen.
-   - No parameters
-   - No return value
-  */
   void draw() {
     pushStyle();
 
@@ -27,16 +20,16 @@ Method line "bird" and refreshes
 
     popStyle();
 
-    y += vy;
-    vy += ay;
+    y += yv;
+    yv += ya;
   }
 
   void resetPlayer() {
     y = 0;
-    vy = 0;
+    yv = 0;
   }
 
   void fly() {
-    vy = -3;
+    yv = -3;
   }
 }
