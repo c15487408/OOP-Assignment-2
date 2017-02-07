@@ -11,7 +11,7 @@ DT228/2
 Player player; //player class variable
 Pillars[] pillars = new Pillars[2]; // array for pillars
 Score score;
-PImage bgImage;
+PImage bgImage; //Background image variable
 boolean gameOver = false;
 boolean gamePlay = false;
 
@@ -27,7 +27,7 @@ void setup()
 score = new Score();
 
 
-  bgImage = loadImage("background.png");
+  bgImage = loadImage("background.png");//Background image
 }
 
 void draw()
