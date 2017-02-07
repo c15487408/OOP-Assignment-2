@@ -86,7 +86,7 @@ void keyPressed()
 }
 
 
-  
+  //Load screen
 void loadScreen()
 {
   if (frameCount<300)
@@ -98,10 +98,11 @@ void loadScreen()
     fill(255);
     text("LOADING..",width*0.5, height *0.5); 
    
-
+   //Rotating circle usisng push matrix and translate func.
     pushMatrix();
     translate(width*0.5, height *0.5);
     rotate(frameCount / 20.0);
+     
      
     fill(255, 0, 0);
     ellipse(200, 180, 60, 60); 
@@ -113,6 +114,8 @@ void loadScreen()
     startScreen(); 
   }
 }
+
+
 
 void startScreen() 
 {
