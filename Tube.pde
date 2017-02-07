@@ -44,4 +44,12 @@ Method line "tube" and refreshes
     pillary = random(110, height-110);
   }
 
+  void repoRect() 
+  {
+    pillarx = width;
+    pillary = random(110, height-110);
+  }
+
+
+
 }
