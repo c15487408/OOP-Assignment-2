@@ -50,7 +50,18 @@ Method line "tube" and refreshes
     pillary = random(110, height-110);
   }
 
+  boolean playerCrash(Player bryan)
+  {
+    
+    boolean result = false;
 
+    if (pillarCrash(bryan.x, bryan.y, bryan.size, bryan.size, pillarx, pillary, pillarx+pillarWidth, height-1) ||  pillarCrash(bryan.x, bryan.y, bryan.size, bryan.size, pillarx, 0, pillarx+pillarWidth, pillary - 100)) 
+    {
+      result = true;
+    }
+
+    return result;
+  }
 
   boolean pillarCrash(float pillarX1, float pillarY1, float firstWidth, float firstHeight, float playerPosX2, float playerPosY2, float xRect2, float yRect2)
   {
