@@ -66,9 +66,9 @@ void fly()
     player.resetPlayer();
     for(Pillars p : pillars)
   { 
-    p.resetRect(); 
+    p.resetRect(); //check reset pillar
 }
-    score.resetScore();
+    score.resetScore(); //check reset score
   }
   else if (!gamePlay)
   {
