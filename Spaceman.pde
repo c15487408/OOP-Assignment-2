@@ -81,9 +81,11 @@ void loadScreen()
   if (frameCount<300)
   {
 
+    rectMode(CENTER);
     textSize(38);
-     fill(255);
-    text("STARTING SYSTEM...",407, height *0.5); 
+    textAlign(CENTER);
+    fill(255);
+    text("LOADING..",width*0.5, height *0.5); 
    
 
     pushMatrix();
@@ -103,6 +105,7 @@ void loadScreen()
 
 void startScreen() 
 {
+   background(bgImage);
   rectMode(CENTER);
   textSize(40);
   textAlign(CENTER);
