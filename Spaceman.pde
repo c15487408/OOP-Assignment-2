@@ -7,8 +7,8 @@ C15487408
 DT228/2
 */
 
-
-Player player;
+//Global variables
+Player player; //player class variable
 Pillars[] pillars = new Pillars[2]; // array for pillars
 Score score;
 PImage bgImage;
