@@ -41,7 +41,7 @@ void draw()
   } 
   else if (!gamePlay) 
   {
-    loadScreen();
+    loadScreen(); // call load screen function
   } 
   else
   {
