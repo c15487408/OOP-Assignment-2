@@ -11,5 +11,14 @@ class Score {
     }
   }
 
+  void resetScore() 
+  {
+    score = 0;
+    addScore = false;
+  }
+  void pillarScore() {
+    addScore = false;
+  }
+
 
 }
