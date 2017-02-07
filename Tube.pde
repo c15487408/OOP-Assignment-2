@@ -1,10 +1,11 @@
 
 class Pillars 
 {
+  //Pillar variables
   float pillarx;
   float pillary;
   float pillarWidth = 58;
-  float pillarx2;
+  float pillarx2; //Inital x cordinate
 
   Pillars(float pillarx3, float pillary3)
   {
@@ -16,18 +17,23 @@ class Pillars
   void draw() 
   {
     pushStyle();
-
-
+    
+    //draw pillars
+    //Pillars/ Rects move using push and pop matrix
     rectMode(CORNERS);
     fill(128,0,0);
     rect(pillarx, pillary, pillarx+pillarWidth, height-1);
     rect(pillarx, 0, pillarx+pillarWidth, pillary - 110);
 
     popStyle();
+    
 
     pillarx -= 1;
+    
+    
   }
-
+  
+  
   void resetRect() 
   {
     pillarx = pillarx2;
