@@ -1,6 +1,8 @@
 class Score {
    int score = 0;
    boolean addScore = false;
+   int score2;
+   
 
   void incrementScore() 
   {
@@ -18,6 +20,12 @@ class Score {
   }
   void pillarScore() {
     addScore = false;
+        rectMode(CORNER);
+    textAlign(LEFT);
+    fill(255);
+    textSize(30);
+    text("Score: " + score, 15, 15, width,45);
+    
   }
 
   void draw()
@@ -29,6 +37,7 @@ class Score {
     fill(255);
     textSize(30);
     text("Score: " + score, 15, 15, width,45);
+    
 
     popStyle();
   }

@@ -2,10 +2,12 @@
 Player player;
 Pillars[] pillars = new Pillars[2]; // array for pillars
 Score score;
+int score2;
 
 PImage bgImage;
 boolean gameOver = false;
 boolean gamePlay = false;
+
 
 void setup()
 {
@@ -15,7 +17,9 @@ void setup()
   pillars[0] = new Pillars(width,random(110, height-110));
   pillars[1] = new Pillars(width+300,random(110, height-110));
   
-  score = new Score();
+score = new Score();
+
+
   bgImage = loadImage("background.png");
 }
 
@@ -121,6 +125,7 @@ void gameOver()
   fill(255);
 
   text("GAME OVER",width/2, height/2,width, 100);
+  score.pillarScore();
 
 }
 //Check if player is out of the screen
@@ -132,6 +137,7 @@ void playerCrashMain() {
   }
 
   for(Pillars pillar : pillars) {
+    
     if (player.x - player.size/2.0 > pillar.pillarx + pillar.pillarWidth) 
     {
       score.incrementScore();
