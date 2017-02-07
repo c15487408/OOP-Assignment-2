@@ -30,7 +30,7 @@ void draw()
   } 
   else if (!gamePlay) 
   {
-    startScreen();
+    loadScreen();
   } 
   else
   {
@@ -75,6 +75,31 @@ void keyPressed()
 }
 
 
+  
+void loadScreen()
+{
+  if (frameCount<300)
+  {
+
+    textSize(38);
+     fill(255);
+    text("STARTING SYSTEM...",407, height *0.5); 
+   
+
+    pushMatrix();
+    translate(width*0.5, height *0.5);
+    rotate(frameCount / 20.0);
+     
+    fill(255, 0, 0);
+    ellipse(200, 180, 60, 60); 
+    popMatrix();
+  } 
+    else
+  {
+    background(0);
+    startScreen(); 
+  }
+}
 
 void startScreen() 
 {
