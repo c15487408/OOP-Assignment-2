@@ -31,12 +31,12 @@ Method line "bird" and refreshes
     vy += ay;
   }
 
-  void reset() {
+  void resetPlayer() {
     y = 0;
     vy = 0;
   }
 
-  void jump() {
+  void fly() {
     vy = -3;
   }
 }
