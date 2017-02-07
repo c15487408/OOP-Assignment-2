@@ -37,7 +37,7 @@ void draw()
  
    if (gameOver)
    {
-    gameOver();
+    gameOver(); 
   } 
   else if (!gamePlay) 
   {
@@ -51,7 +51,7 @@ void draw()
     p.draw(); 
   }
   score.draw();
-  playerCrashMain();
+  playerCrashMain(); // Calling If player crashed function
 
     
   }
