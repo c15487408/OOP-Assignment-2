@@ -47,11 +47,13 @@ class Pillars
     pillarx = width;
     pillary = random(110, height-110);
   }
+  
+  //Function to see if the player crashed
 
-  boolean playerCrash(Player bryan)
+  boolean playerCrash(Player bryan) //Player name
   {
     
-    boolean result = false;
+    boolean result = false; //variable to define if it has crashed
 
     if (pillarCrash(bryan.x, bryan.y, bryan.size, bryan.size, pillarx, pillary, pillarx+pillarWidth, height-1) ||  pillarCrash(bryan.x, bryan.y, bryan.size, bryan.size, pillarx, 0, pillarx+pillarWidth, pillary - 100)) 
     {
@@ -60,14 +62,16 @@ class Pillars
 
     return result;
   }
-
+  
+  //Pillar Collision
   boolean pillarCrash(float pillarX1, float pillarY1, float firstWidth, float firstHeight, float playerPosX2, float playerPosY2, float xRect2, float yRect2)
   {
     float halfHeight = firstHeight/2;
     float halfWidth = firstWidth/2;
     return playerPos(pillarX1 + halfWidth, pillarY1 + halfHeight, playerPosX2, playerPosY2, xRect2, yRect2) ||playerPos(pillarX1 - halfWidth, pillarY1 - halfHeight, playerPosX2, playerPosY2, xRect2, yRect2) ||playerPos(pillarX1 + halfWidth, pillarY1 - halfHeight, playerPosX2, playerPosY2, xRect2, yRect2)|| playerPos(pillarX1 - halfWidth, pillarY1 + halfHeight, playerPosX2, playerPosY2, xRect2, yRect2);
   }
-
+  
+  //Where player
   boolean playerPos(float x, float y, float playerPosX, float playerPosY, float xRect, float yRect)
   {
     return (x >= playerPosX && x <= xRect && y >= playerPosY && y <= yRect);
