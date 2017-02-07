@@ -3,7 +3,7 @@ class Score {
    boolean addScore = false;
    int score2;
    
-
+   //Function to increment score
   void incrementScore() 
   {
     if (!addScore)
