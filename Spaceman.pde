@@ -45,13 +45,15 @@ void draw()
   } 
   else
   {
+    
+    //draw functions of all classes
     player.draw();
     for(Pillars p : pillars) 
     { 
     p.draw(); 
   }
   score.draw();
-  playerCrashMain(); // Calling If player crashed function
+  playerCrashMain(); // Calling 'If player crashed' function
 
     
   }
@@ -125,8 +127,14 @@ void startScreen()
   textAlign(CENTER);
   fill(255);
   text("SPACEMAN",width/2, height/2,width, 100);
+  
+  rectMode(CENTER);
+  textSize(18);
+  textAlign(CENTER);
+  fill(255);
+  text("Press any button to start",width/2, height/2+60,width+40, 100);
 }
-
+//Game Over Screen
 void gameOver() 
 {
   rectMode(CENTER);
@@ -135,12 +143,19 @@ void gameOver()
   fill(255);
 
   text("GAME OVER",width/2, height/2,width, 100);
-  score.pillarScore();
+  score.pillarScore(); // Display score at  end when game over
+    rectMode(CENTER);
+  textSize(18);
+  textAlign(CENTER);
+  fill(255);
+  text("Press any button to restart",width/2, height/2+60,width+40, 100);
 
 }
-//Check if player is out of the screen
+
+
 void playerCrashMain() {
   
+ //Check if player is out of the screen 
   if (player.y > height || player.y < 0) 
   {
     gameOver = true;
@@ -150,19 +165,20 @@ void playerCrashMain() {
     
     if (player.x - player.size/2.0 > pillar.pillarx + pillar.pillarWidth) 
     {
-      score.incrementScore();
+      score.incrementScore(); //see if player passed and increment score
     }
         
       if (pillar.pillarx + pillar.pillarWidth < 0) 
       {
-      pillar.repoRect();
+      pillar.repoRect(); //repositon pillar
       score.pillarScore();
     }
     
-
+    //Check if player hit pillar
     if (pillar.playerCrash(player))
     {
       gameOver = true;
     }
   }
 }
+//End
