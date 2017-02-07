@@ -1,9 +1,16 @@
-//Reyan Jaimon
+/*
+OOP Assignment 2
+SPACEMAN
+
+Reyan Jaimon
+C15487408
+DT228/2
+*/
+
+
 Player player;
 Pillars[] pillars = new Pillars[2]; // array for pillars
 Score score;
-int score2;
-
 PImage bgImage;
 boolean gameOver = false;
 boolean gamePlay = false;
