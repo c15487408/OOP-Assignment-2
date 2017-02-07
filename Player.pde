@@ -6,7 +6,8 @@
   float ya = 0.25;
   PImage player;
 
-  Player(float x3, float y3) {
+  Player(float x3, float y3) 
+  {
     x = x3;
     y = y3;
     player = loadImage("player.png");
@@ -24,12 +25,14 @@
     yv += ya;
   }
 
-  void resetPlayer() {
+  void resetPlayer() //Reset player Position
+  {
     y = 0;
     yv = 0;
   }
 
-  void fly() {
-    yv = -3;
+  void fly() 
+  {
+    yv = -3; //function used to make player fly
   }
 }
